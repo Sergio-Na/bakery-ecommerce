@@ -25,21 +25,23 @@ function Rig({ children }) {
 
 const CakeScene = () => {
   return (
-    <Canvas className="">
-      <PerspectiveCamera makeDefault fov={70} position={[0, 10, 15]} />
-      {/* <OrbitControls enableZoom={false} /> */}
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[-2, 5, 2]} intensity={1} />
-      <Suspense fallback={null}>
-        {/* <mesh rotation={[90, 0, 20]}>
+    <div className="flex justify-center items-center h-screen">
+      <Canvas className=" border-blue-500 border-solid bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 w-3/4">
+        <PerspectiveCamera makeDefault fov={70} position={[0, 1, 10]} />
+        <Suspense fallback={null}>
+          {/* <mesh rotation={[90, 0, 20]}>
             <boxBufferGeometry attach="geometry" args={[3, 3, 3]} />
             <meshNormalMaterial attach="material" />
           </mesh> */}
-        <Rig>
-          <Model className="absolute top-10 " />
-        </Rig>
-      </Suspense>
-    </Canvas>
+          <Rig>
+            <Model className="" />
+          </Rig>
+        </Suspense>
+        {/* <OrbitControls enableZoom={false} /> */}
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[-2, 5, 2]} intensity={1} />
+      </Canvas>
+    </div>
   );
 };
 

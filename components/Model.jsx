@@ -13,7 +13,13 @@ export function Model(props) {
   const { nodes, materials } = useGLTF("/cake-processed.gltf");
 
   return (
-    <group className="h-10" {...props} dispose={null} scale={5}>
+    <group
+      className=""
+      {...props}
+      dispose={null}
+      scale={5}
+      rotation={[0.6, 0, 0]}
+    >
       <group
         position={[0.28, -0.09, -1.18]}
         rotation={[-Math.PI, 1.12, -Math.PI]}

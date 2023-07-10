@@ -9,9 +9,8 @@ const index = ({ products, bannerData }) => {
   products.map((product) => console.log(product));
 
   return (
-    <div className="h-screen bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400">
+    <div className="">
       <Navbar />
-      {/* <HeroBanner className=" absolute inset-x-0 top-0 h-16" /> */}
       <CakeScene />
 
       {/* <h3 className='text-5xl text-center text-pink-500'>
