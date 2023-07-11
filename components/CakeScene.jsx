@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useCamera, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import { Suspense, useRef } from "react";
 import { Model } from "./Model";
 import { useFrame } from "@react-three/fiber";
@@ -25,19 +25,17 @@ function Rig({ children }) {
 
 const CakeScene = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <Canvas className=" border-blue-500 border-solid bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 w-3/4">
-        <PerspectiveCamera makeDefault fov={70} position={[0, 1, 10]} />
+    <div className="flex flex-col justify-center items-center h-4/6 bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400">
+      {/* <h1 className="  lg:text-7xl top-40 fixed   text-white font-semibold subpixel-antialiased	tracking-wide sm:text-6xl ">
+        Slices of Joy, Baked with Love
+      </h1> */}
+      <Canvas className="w-3/4">
+        <PerspectiveCamera makeDefault fov={70} position={[0, 4, 10]} />
         <Suspense fallback={null}>
-          {/* <mesh rotation={[90, 0, 20]}>
-            <boxBufferGeometry attach="geometry" args={[3, 3, 3]} />
-            <meshNormalMaterial attach="material" />
-          </mesh> */}
           <Rig>
-            <Model className="" />
+            <Model />
           </Rig>
         </Suspense>
-        {/* <OrbitControls enableZoom={false} /> */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} intensity={1} />
       </Canvas>

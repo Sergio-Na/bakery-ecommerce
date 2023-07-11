@@ -17,8 +17,8 @@ export function Model(props) {
       className=""
       {...props}
       dispose={null}
-      scale={5}
-      rotation={[0.6, 0, 0]}
+      scale={8}
+      rotation={[0.4, 0, 0]}
     >
       <group
         position={[0.28, -0.09, -1.18]}

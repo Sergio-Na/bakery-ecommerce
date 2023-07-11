@@ -9,7 +9,7 @@ const index = ({ products, bannerData }) => {
   products.map((product) => console.log(product));
 
   return (
-    <div className="">
+    <div className="h-screen">
       <Navbar />
       <CakeScene />
 
